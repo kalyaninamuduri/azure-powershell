@@ -92,7 +92,7 @@ function Test-AzMarkdownHelp
         $Exceptions = Import-Csv "$SuppressedExceptionsPath\ValidateHelpIssues.csv"
         [String[]]$errors = @()
         $MarkdownFiles = Get-ChildItem -Path $HelpFolder -Filter "*.md"
-        $ModuleName = $HelpFolder.Parent.Parent.Name
+        $ModuleName = $HelpFolder.Parent.Name
         foreach ($file in $MarkdownFiles)
         {
             # Ignore the module page
